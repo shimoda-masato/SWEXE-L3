@@ -1,0 +1,7 @@
+<%= form_for @Tweet ,url: {action: :update} do  |f|%>
+ <p>
+     <%= f.text_area :message %>
+     <%= f.submit '更新' %>
+ </p>
+ <% end %>
+

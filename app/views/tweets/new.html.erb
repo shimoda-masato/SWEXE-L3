@@ -1,0 +1,23 @@
+<% if @Tweet.errors.present? %>
+<h3>エラーがあります</h3>
+<ul>
+   <% @Tweet.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+
+
+
+
+<%= form_for @Tweet ,url: {action: :create} do  |f|%>
+ <p>
+     <%= f.text_area :message %>
+     <%= f.submit 'ツイート' %>
+ </p>
+ <% end %>
+
+<%= link_to :back do %>
+  <button>戻る</button>
+<% end %>
